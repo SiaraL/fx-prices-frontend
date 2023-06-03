@@ -1,0 +1,16 @@
+<div class="fx-prices">
+  <div class="fx-prices__header">
+    <div>Nazwa</div>
+    <div>Bid</div>
+    <div>Ask</div>
+    <div>Data</div>
+  </div>
+  <div class="fx-prices__wrapper">
+    <div *ngFor="let element of fxData" class="fx-prices__element">
+      <div>{{ element.name }}</div>
+      <div class="fx-prices__price">{{ element.bid.toFixed(4) }}</div>
+      <div class="fx-prices__price">{{ element.ask.toFixed(4) }}</div>
+      <div>{{ element.date | date : "HH:mm:ss dd/MM/yy" }}</div>
+    </div>
+  </div>
+</div>

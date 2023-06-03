@@ -1,0 +1,51 @@
+.fx-prices {
+  margin: 0 auto;
+  font-size: 1.5rem;
+  width: 35em;
+  height: 100%;
+
+  user-select: none;
+
+  &__header {
+    font-weight: bold;
+  }
+
+  &__header,
+  &__element {
+    display: grid;
+    grid-template-columns: 8em 6em 6em 15em;
+
+    padding: 0.5em;
+    border-bottom: 1px solid #bbbbbb;
+
+    &:nth-child(odd) {
+      background-color: rgba(#eeeeee, 0.5);
+    }
+  }
+
+  &__element {
+    &:hover {
+      background-color: rgba(coral, 0.05);
+    }
+  }
+
+  &__price {
+    text-align: right;
+    padding-right: 2em;
+  }
+
+  &__wrapper {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: calc(100% - 3em);
+
+    &::-webkit-scrollbar {
+      width: 4px;
+      background-color: rgba(#ccc, 0.2);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(coral, 0.3);
+    }
+  }
+}
